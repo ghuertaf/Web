@@ -34,6 +34,20 @@
             "clase":"Asesino",
             "dificultad":"Normal",
             "icono":"https://ddragon.leagueoflegends.com/cdn/9.18.1/img/champion/MonkeyKing.png"
+        },
+        {
+            "nombre":"Lulu",
+            "titulo":"La Hechicera Hadística",
+            "clase":"Support",
+            "dificultad":"Normal",
+            "icono":"https://ddragon.leagueoflegends.com/cdn/9.18.1/img/champion/Lulu.png"
+        },
+        {
+            "nombre":"Malphite",
+            "titulo":"el Fragmento del Monolito",
+            "clase":"Tanque",
+            "dificultad":"Normal",
+            "icono":"https://ddragon.leagueoflegends.com/cdn/9.18.1/img/champion/Malphite.png"
         }
     ]
 }

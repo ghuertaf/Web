@@ -17,10 +17,16 @@ class App extends Component {
           <div className="card mt-4">
             <div className="card-header">
              <h3>{personaje.nombre}</h3>
-             <spam className="badge badge-pill badge-danger ml-2">
-              {personaje.nombre}
+             <spam className="text-white">
+              {personaje.titulo}
              </spam>
-            </div>            
+              <div className="text-white">
+                {personaje.clase}
+              </div>
+              <div className="text-white">
+                {personaje.dificultad}
+              </div>
+            </div>     
             <div className = "card-body">
             <img src={personaje.icono}/>
             </div>
