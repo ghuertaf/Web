@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import {personajes} from "./personajes.json";
+import Navegacion from './Componentes/Navegacion';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor (){
+    super();
+    this.state = {
+      personajes:personajes
+    }
+  }
+  render () {
+    const personajes = this.state.personajes.map((personaje, i) => {
+      return(
+        <div className="col-md-4">
+          <div className="card mt-4">
+            <div className="card-header">
+             <h3>{personaje.nombre}</h3>
+             <spam className="badge badge-pill badge-danger ml-2">
+              {personaje.nombre}
+             </spam>
+            </div>            
+            <div className = "card-body">
+            <img src={personaje.icono}/>
+            </div>
+          </div>
+        </div>
+      )
+    }); 
+    return (
+      <div className="App">  
+        <Navegacion titulo="Personajes"/>
+        <div className="container"> 
+          <div className="row mt-4">
+            {personajes}
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

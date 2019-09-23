@@ -1,0 +1,39 @@
+{
+    "personajes": [
+        {
+            "nombre":"Fizz",
+            "titulo":"el Bromista de las Mareas",
+            "clase":"Asesino",
+            "dificultad":"Facil",
+            "icono":"https://ddragon.leagueoflegends.com/cdn/9.18.1/img/champion/Fizz.png"
+        },
+        {
+            "nombre":"Pyke",
+            "titulo":"el Destripador del Muelle Rojo",
+            "clase":"Asesino",
+            "dificultad":"Normal",
+            "icono":"https://ddragon.leagueoflegends.com/cdn/9.18.1/img/champion/Pyke.png"
+        },
+        {
+            "nombre":"Renekton",
+            "titulo":"el Carnicero de las Arenas",
+            "clase":"Cuerpo a Cuerpo",
+            "dificultad":"Facil",
+            "icono":"https://ddragon.leagueoflegends.com/cdn/9.18.1/img/champion/Renekton.png"
+        },
+        {
+            "nombre":"Teemo",
+            "titulo":"el Explorador Veloz",
+            "clase":"Tirador",
+            "dificultad":"Facil",
+            "icono":"https://ddragon.leagueoflegends.com/cdn/9.18.1/img/champion/Teemo.png"
+        },
+        {
+            "nombre":"Wukong",
+            "titulo":"el Rey de los Monos",
+            "clase":"Asesino",
+            "dificultad":"Normal",
+            "icono":"https://ddragon.leagueoflegends.com/cdn/9.18.1/img/champion/MonkeyKing.png"
+        }
+    ]
+}
