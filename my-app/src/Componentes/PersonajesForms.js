@@ -16,7 +16,7 @@ class PersonajeForm extends Component{
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.onAddTodo(this.state);
+        this.props.insertaPersonaje(this.state);
         this.setState({
             nombre:'',
             titulo:'',
@@ -45,7 +45,7 @@ class PersonajeForm extends Component{
                   className="form-control"
                   value={this.state.nombre}
                   onChange={this.handleInputChange}
-                  placeholder="nombre"
+                  placeholder="Nombre"
                   />
               </div>
               <div className="form-group">
@@ -55,7 +55,7 @@ class PersonajeForm extends Component{
                   className="form-control"
                   value={this.state.titulo}
                   onChange={this.handleInputChange}
-                  placeholder="titulo"
+                  placeholder="Titulo"
                   />
               </div>
               <div className="form-group">
@@ -65,7 +65,7 @@ class PersonajeForm extends Component{
                   className="form-control"
                   value={this.state.clase}
                   onChange={this.handleInputChange}
-                  placeholder="clase"
+                  placeholder="Clase"
                   />
               </div>
               <div className="form-group">
@@ -75,9 +75,9 @@ class PersonajeForm extends Component{
                     value={this.state.dificultad}
                     onChange={this.handleInputChange}
                   >
-                  <option>facil</option>
-                  <option>normal</option>
-                  <option>dificil</option>
+                  <option>Facil</option>
+                  <option>Normal</option>
+                  <option>Dificil</option>
                 </select>
               </div>
               <div className="form-group">
@@ -87,11 +87,11 @@ class PersonajeForm extends Component{
                   className="form-control"
                   value={this.state.icono}
                   onChange={this.handleInputChange}
-                  placeholder="icono"
+                  placeholder="Icono"
                   />
               </div>
               <button type="submit" className="btn btn-primary">
-                Save
+                Guardar
               </button>
             </form>
           </div>

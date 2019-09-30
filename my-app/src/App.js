@@ -4,17 +4,18 @@ import {personajes} from "./personajes.json";
 import Navegacion from './Componentes/Navegacion';
 
 // subcomponents
-import PersonajeForm from './Componentes/PersonajesForms';
+import PersonajeForm from './Componentes/PersonajesForms.js';
 
 class App extends Component {
   constructor (){
     super();
     this.state = {
-      personajes:personajes
+      personajes
     }
+    this.agregaPersonaje = this.agregaPersonaje.bind(this);
   }
 
-  removeTodo(index) {
+  remuevePersonaje(index) {
     this.setState({
       personajes: this.state.personajes.filter((e, i) => {
         return i !== index
@@ -22,7 +23,7 @@ class App extends Component {
     });
   }
 
-  handleAddTodo(personaje) {
+  agregaPersonaje(personaje) {
     this.setState({
       personajes: [...this.state.personajes, personaje]
     })
@@ -31,7 +32,7 @@ class App extends Component {
   render () {
     const personajes = this.state.personajes.map((personaje, i) => {
       return(
-        <div className="col-md-4">
+        <div className="col-md-4" key={i}>
           <div className="card mt-4">
             <div className="card-header">
              <h3>{personaje.nombre}</h3>
@@ -51,8 +52,8 @@ class App extends Component {
             <div className="card-footer">
               <button
                 className="btn btn-danger"
-                onClick={this.removeTodo.bind(this, i)}>
-                Delete
+                onClick={this.remuevePersonaje.bind(this, i)}>
+                Eliminar
               </button>
             </div>
           </div>
@@ -64,7 +65,7 @@ class App extends Component {
 
         <nav className="navbar navbar-dark bg-dark">
           <a className="navbar-brand" href="/">
-            Tasks
+            Personajes
             <span className="badge badge-pill badge-light ml-2">
               {this.state.personajes.length}
             </span>
@@ -75,7 +76,7 @@ class App extends Component {
           <div className="row mt-4">
 
             <div className="col-md-4 text-center">
-              <PersonajeForm onAddTodo={this.handleAddTodo}></PersonajeForm>
+              <PersonajeForm insertaPersonaje={this.agregaPersonaje}></PersonajeForm>
             </div>
 
             <div className="col-md-8">
