@@ -36,7 +36,7 @@ class PersonajeForm extends Component{
 
     render() {
         return (
-          <div className="card">
+          <div className="card bg-dark">
             <form onSubmit={this.handleSubmit} className="card-body">
               <div className="form-group">
                 <input
@@ -90,7 +90,7 @@ class PersonajeForm extends Component{
                   placeholder="Icono"
                   />
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn btn-outline-primary">
                 Guardar
               </button>
             </form>

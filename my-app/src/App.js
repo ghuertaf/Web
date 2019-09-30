@@ -23,6 +23,12 @@ class App extends Component {
     });
   }
 
+  editaPersonaje(index) {
+    this.setState({
+      
+    });
+  }
+
   agregaPersonaje(personaje) {
     this.setState({
       personajes: [...this.state.personajes, personaje]
@@ -34,8 +40,8 @@ class App extends Component {
       return(
         <div className="col-md-4" key={i}>
           <div className="card mt-4">
-            <div className="card-header">
-             <h3>{personaje.nombre}</h3>
+            <div className="card-header bg-dark text-white">
+             <h3 className= "text-center">{personaje.nombre}</h3>
              <spam className="text-white">
               {personaje.titulo}
              </spam>
@@ -46,12 +52,18 @@ class App extends Component {
                 {personaje.dificultad}
               </div>
             </div>     
-            <div className = "card-body">
-            <img src={personaje.icono}/>
+            <div className = "card-body text-center bg-dark" >
+              <img src={personaje.icono }/>
             </div>
-            <div className="card-footer">
+            <div className="card-footer text-center bg-dark">
               <button
-                className="btn btn-danger"
+                className="btn btn-outline-success"
+                onClick={this.editaPersonaje.bind(this, i)}>
+                Editar
+              </button>
+
+              <button
+                className="btn btn-outline-danger"
                 onClick={this.remuevePersonaje.bind(this, i)}>
                 Eliminar
               </button>
